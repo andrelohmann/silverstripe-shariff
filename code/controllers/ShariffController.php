@@ -34,7 +34,7 @@ class ShariffController extends Controller {
         
         public function index(){
             
-            $backend = new Heise\Shariff\Backend(SHARIFF_OPTIONS);
+            $backend = new Heise\Shariff\Backend(json_decode(SHARIFF_OPTIONS, true));
             
             return $this->jsonResponse($backend->get($_GET['url']));
 	}

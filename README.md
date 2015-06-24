@@ -29,11 +29,11 @@ Necessarily load font-awesome 4.3.0 and jquery
 Add the following to your _ss_environment.php
 
 ```
-define('SHARIFF_OPTIONS', [
+define('SHARIFF_OPTIONS', jsond_encode(array(
     "domain"   => 'YOURDOMAIN',
     "cache"    => ["ttl" => 1],
     "services" => ["Facebook", "GooglePlus", "Twitter", "LinkedIn", "Reddit", "StumbleUpon", "Flattr", "Pinterest"]
-]);
+)));
 ```
 
 and configure following these instructions:
