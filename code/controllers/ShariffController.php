@@ -29,7 +29,7 @@ class ShariffController extends Controller {
 	public function init() {
             parent::init();
             
-            if(!isser($_GET['url'])) return $this->httpError(404, 'missing url parameter');
+            if(!isset($_GET['url'])) return $this->httpError(404, 'missing url parameter');
  	}
         
         public function index(){
