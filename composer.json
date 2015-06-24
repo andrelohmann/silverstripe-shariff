@@ -1,0 +1,10 @@
+{
+	"name": "andrelohmann-silverstripe/shariff",
+	"type": "silverstripe-module",
+	"require": {
+		"php": ">=5.4",
+		"composer/installers": "*",
+                "heise/shariff": "1.5.1"
+	},
+	"minimum-stability": "stable"
+}

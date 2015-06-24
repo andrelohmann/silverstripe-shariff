@@ -1,0 +1,7 @@
+---
+Name: customroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'shariff//$Action/$ID/$OtherID' : 'ShariffController'
