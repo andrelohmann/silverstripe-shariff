@@ -6,9 +6,9 @@
  */
 class ShariffController extends Controller {
 	
-	public static $url_topic = 'shariff';
+	public static $url_topic = 'shariffbackend';
 	
-	public static $url_segment = 'shariff';
+	public static $url_segment = 'shariffbackend';
 	
 	private static $allowed_actions = array( 
             'index'
@@ -29,13 +29,13 @@ class ShariffController extends Controller {
 	public function init() {
             parent::init();
             
-            if(!isset($_GET['url'])) return $this->httpError(404, 'missing url parameter');
+            if(!isset($_GET['pageUrl'])) return $this->httpError(404, 'missing url parameter');
  	}
         
         public function index(){
             
             $backend = new Heise\Shariff\Backend(json_decode(SHARIFF_OPTIONS, true));
             
-            return $this->jsonResponse($backend->get($_GET['url']));
+            return $this->jsonResponse($backend->get($_GET['pageUrl']));
 	}
 }

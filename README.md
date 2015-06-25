@@ -50,7 +50,7 @@ add the following to your template(s)
 <link href="shariff/css/shariff.min.css" rel="stylesheet" />
 
 # in body
-<div class="shariff" data-backend-url="shariff" data-url="$Link" data-orientation="horizontal"></div>
+<div class="shariff" data-backend-url="shariffbackend" data-url="$Link" data-orientation="horizontal"></div>
 
 # in bottom right after jquery gets loaded
 <script src="shariff/javascript/shariff.min.js"></script>
@@ -60,9 +60,7 @@ and configure following these instructions:
 https://github.com/heiseonline/shariff#options-data-attributes
 
 ### Notice
- * After each Update, set the new Tag
-```
-git tag -a v1.2.3.4 -m 'Version 1.2.3.4'
-git push -u origin v1.2.3.4
-```
- * Also update the requirements in andrelohmann/silverstripe-apptemplate
+this plugin uses a forked Version of shariff (https://github.com/andrelohmann/shariff)
+the "url" Paramater, submitting the current Page Url to the packend, is colliding with the same
+parameter also used by the silverstripe bootstrap process.
+The fork simply changes this parameter from "url" to "pageUrl"
