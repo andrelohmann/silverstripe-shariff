@@ -27,15 +27,24 @@ class ShariffController extends Controller {
 	 * Initialise the controller
 	 */
 	public function init() {
-            parent::init();
+        parent::init();
             
-            if(!isset($_GET['pageUrl'])) return $this->httpError(404, 'missing url parameter');
+        if(!isset($_GET['pageUrl'])) return $this->httpError(404, 'missing url parameter');
  	}
-        
-        public function index(){
+	
+	public function index(){    
+        $backend = new Heise\Shariff\Backend(json_decode(SHARIFF_OPTIONS, true));
             
-            $backend = new Heise\Shariff\Backend(json_decode(SHARIFF_OPTIONS, true));
-            
-            return $this->jsonResponse($backend->get($_GET['pageUrl']));
+        return $this->jsonResponse($backend->get($_GET['pageUrl']));
 	}
+        
+    /**
+     * @param type $array
+     * @return json object
+     */
+    public function jsonResponse($array){
+        Controller::curr()->response->addHeader("Content-Type", "application/json");
+            
+        return json_encode($array);
+    }
 }
