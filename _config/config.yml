@@ -1,0 +1,5 @@
+name: shariff
+---
+Controller:
+  extensions:
+    - ShariffControllerExtension

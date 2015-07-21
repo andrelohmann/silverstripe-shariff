@@ -18,7 +18,7 @@ https://github.com/heiseonline/shariff
 
 ## Usage
 
-Uses current frontend Version 1.14.0
+Uses current frontend Version 1.16.0
 
 Uses current shariff-php Version 1.5.1
 
@@ -46,14 +46,8 @@ include font-awesome 4.3.0
 add the following to your template(s)
 
 ```
-# in head
-<link href="shariff/css/shariff.min.css" rel="stylesheet" />
-
 # in body
 <div class="shariff" data-backend-url="shariffbackend" data-url="$Link" data-orientation="horizontal"></div>
-
-# in bottom right after jquery gets loaded
-<script src="shariff/javascript/shariff.min.js"></script>
 ```
 
 and configure following these instructions:
