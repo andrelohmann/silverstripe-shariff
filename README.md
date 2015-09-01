@@ -5,6 +5,10 @@
  * Andre Lohmann (Nickname: andrelohmann)
   <lohmann dot andre at googlemail dot com>
 
+## Requirements
+
+Silverstripe 3.2.x
+
 ## Introduction
 
 Silverstripe Implementation of the Heise c't shariff plugin
@@ -58,3 +62,12 @@ this plugin uses a forked Version of shariff (https://github.com/andrelohmann/sh
 the "url" Paramater, submitting the current Page Url to the packend, is colliding with the same
 parameter also used by the silverstripe bootstrap process.
 The fork simply changes this parameter from "url" to "pageUrl"
+
+
+This repository uses the git flow paradigm.
+After each release cycle, do not forget to push tags, master and develop to the remote origin
+```
+git push --tags
+git push origin develop
+git push origin master
+```
